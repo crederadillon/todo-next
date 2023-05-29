@@ -34,7 +34,7 @@ export interface Database {
   }
   public: {
     Tables: {
-      todo: {
+      todos: {
         Row: {
           complete: boolean
           created_at: string
