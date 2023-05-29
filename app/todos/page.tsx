@@ -6,10 +6,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 const Page = async () => {
-  let { data: todos, error } = await supabase
-    .from("todos")
-    .select("*")
-    .eq("id", 2);
+  let { data: todos, error } = await supabase.from("todos").select("*");
 
   if (error) throw new Error(error.message);
 
